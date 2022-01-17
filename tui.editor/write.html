@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TUI Editor</title>
+    <!-- 에디터 CSS -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+</head>
+<body>
+
+<div id="editor"></div>
+
+<button type="button" id="getHtml">getHtml</button>
+<button type="button" id="getMarkdown">getMarkdown</button>
+
+<!-- 에디터 Javascript -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+<script src="tui.editor.js"></script>
+<script>
+    // 이벤트 바인드
+    Editor.bindEvent();
+    // 에디터 초기화
+    Editor.initEditor();
+</script>
+</body>
+</html>

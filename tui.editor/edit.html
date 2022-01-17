@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TUI Editor</title>
+    <!-- 에디터 CSS -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+</head>
+<body>
+
+<input type="hidden" id="initialValue" value="![image](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)
+
+# Awesome Editor!
+
+It has been *released as opensource in 2018* and has ~~continually~~ evolved to **receive 10k GitHub ⭐️ Stars**.
+
+## Create Instance
+
+You can create an instance with the following code and use `getHtml()` and `getMarkdown()` of the [Editor](https://github.com/nhn/tui.editor).
+
+```js
+const editor = new Editor(options);
+```
+
+> See the table below for default options
+> > More API information can be found in the document
+
+| name | type | description |
+| ---- | ---- | ----------- |
+| el | `HTMLElement` | container element |
+
+## Features
+
+* CommonMark + GFM Specifications
+    * Live Preview
+    * Scroll Sync
+    * Auto Indent
+    * Syntax Highlight
+        1. Markdown
+        2. Preview
+
+## Support Wrappers
+
+> * Wrappers
+>     1. [x] React
+>     2. [x] Vue
+>     3. [ ] Ember">
+
+<div id="editor"></div>
+
+<button type="button" id="getHtml">getHtml</button>
+<button type="button" id="getMarkdown">getMarkdown</button>
+
+<!-- 에디터 Javascript -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+<script src="tui.editor.js"></script>
+<script>
+    // 이벤트 바인드
+    Editor.bindEvent();
+    // 에디터 초기화 (초기값을 가지고)
+    Editor.initEditor(document.querySelector('#initialValue').value);
+</script>
+</body>
+</html>
